@@ -48,7 +48,7 @@ func FindQuiz(id int) Quiz {
 func UpdateQuiz(q Quiz) error {
 	for i, qi := range quizes {
 		if qi.ID == q.ID {
-			q.Score = q.Score + 1
+			q.Score = q.Score
 			q.FirstNumber = rand.Intn(10)
 			q.SecondNumber = rand.Intn(10)
 			q.CalcResult()
